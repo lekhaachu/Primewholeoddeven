@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.primewholeoddeven.PrimeWholeOddEven">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/btnDecrese"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp"
+        android:onClick="decreaseBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/displayText"
+        android:layout_alignTop="@+id/btnDecrese"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/btnDecrese" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increase"
+        android:layout_alignTop="@+id/displayText"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:onClick="increaseBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whole Number"
+        android:id="@+id/btnWhole"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:onClick="wholeBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odd Number"
+        android:id="@+id/btnOdd"
+        android:layout_alignTop="@+id/btnWhole"
+        android:layout_toRightOf="@+id/displayText"
+        android:layout_toEndOf="@+id/displayText"
+        android:onClick="oddBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Even Number"
+        android:id="@+id/btnEven"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/btnWhole"
+        android:layout_alignLeft="@+id/btnWhole"
+        android:layout_alignStart="@+id/btnWhole"
+        android:nestedScrollingEnabled="false"
+        android:onClick="evenBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prime Number"
+        android:id="@+id/btnPrime"
+        android:layout_alignTop="@+id/btnEven"
+        android:layout_alignLeft="@+id/btnOdd"
+        android:layout_alignStart="@+id/btnOdd"
+        android:onClick="primeBtn" />
+
+</RelativeLayout>
